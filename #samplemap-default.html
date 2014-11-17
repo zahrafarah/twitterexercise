@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+<body>
+<h1><FONT COLOR="maroon">Eminem killed it at Austin City Limits</FONT></h1>
+<b>EMINEM IS A RAP GOD</b>, according to Twitter. At this year's Austin City Limits, concert goers who used Eminem in their tweet aslo used the hashtag #rapgod.
+<br>
+</br>
+One person tweeted they felt bad for other artists, who preformed for empty crowds because people were waiting in line to see Eminem. 
+<h3> "Felt bad for @IGGYAZALEA at #acl right before @Eminem so alot of fans missed her waiting for a good spot to watch the #RapGod." </h3> 
+
+The people who couldn't see him, also went on Twitter to express their frustration. 
+<h3>"Megan was showing me a video of Eminem from ACL and all I could say was "I didn't see Eminem" and I burst straight into tears.. #obsession."</h3>
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+  <script>
+
+     var map;
+
+     function makeMap(lat, long) {
+       var latlng = new google.maps.LatLng(lat, long);
+       var options = {
+         zoom: 8,
+         center: latlng,
+         styles: [{"featureType":"landscape","stylers":[{"hue":"#F1FF00"},{"saturation":-27.4},{"lightness":9.4},{"gamma":1}]},{"featureType":"road.highway","stylers":[{"hue":"#0099FF"},{"saturation":-20},{"lightness":36.4},{"gamma":1}]},{"featureType":"road.arterial","stylers":[{"hue":"#00FF4F"},{"saturation":0},{"lightness":0},{"gamma":1}]},{"featureType":"road.local","stylers":[{"hue":"#FFB300"},{"saturation":-38},{"lightness":11.2},{"gamma":1}]},{"featureType":"water","stylers":[{"hue":"#00B6FF"},{"saturation":4.2},{"lightness":-63.4},{"gamma":1}]},{"featureType":"poi","stylers":[{"hue":"#9FFF00"},{"saturation":0},{"lightness":0},{"gamma":1}]}],
+       };
+
+       map = new google.maps.Map(document.getElementById("map"), options);
+     }
+
+     function printCoords() {
+       num_coords = $('table tbody tr').length
+       var cTable = document.getElementById("cTable")
+       for (i = 0; i < num_coords; i++)
+         lng = cTable.rows[i].cells[0].textContent
+         lat = cTable.rows[i].cells[1].textContent
+        document.write(lat + "\t, " + lng + "\n")
+     }					  
+     
+     var pinImage = new google.maps.MarkerImage("new_marker.png");
+
+
+     function placeMarkers() {
+       num_coords = $('table tbody tr').length
+       var cTable = document.getElementById("cTable")
+       for (i = 0; i < num_coords; i++) {
+         lng = cTable.rows[i].cells[0].textContent
+         lat = cTable.rows[i].cells[1].textContent
+	 text = cTable.rows[i].cells[2].textContent
+         var myLatlng = new google.maps.LatLng(lat,lng);
+
+	 var marker = new google.maps.Marker({
+	   position: myLatlng,
+	   map: map,
+	   icon: pinImage,
+	   title: text
+	 });
+       }
+     }					  
+
+
+   $(document).ready(function () {
+     $('#cTable').hide()
+     
+     makeMap(30, -97)
+     placeMarkers()
+
+   });
+
+  </script>
+</head>
+
+<body>
+
+<body>
+<div id = "map" style="height: 468px"></div></div><table id = "cTable">
+<tr id = "coord0">
+<td id = "lng">-100.44602094</td><td id = "lat">31.44573434</td>
+<td>My biggest regret in life so far is not going to see Eminem at ACL. 😔</td>
+</tr>
+<tr id = "coord1">
+<td id = "lng">-100.482879</td><td id = "lat">31.43278083</td>
+<td>Megan was showing me a video of Eminem from ACL and all I could say was "I didn't see Eminem" and I burst straight into tears..😭😂 #obsession</td>
+</tr>
+<tr id = "coord2">
+<td id = "lng">-93.99571318</td><td id = "lat">29.96759365</td>
+<td>@eventreviews Eminem and Outkast were amazing, but I discovered the Avett Brothers at ACL and they changed my life!</td>
+</tr>
+<tr id = "coord3">
+<td id = "lng">-100.48282058</td><td id = "lat">31.43288473</td>
+<td>@maddie_massey just burst into tears seeing eminem videos from ACL.</td>
+</tr>
+<tr id = "coord4">
+<td id = "lng">-97.7694157</td><td id = "lat">30.26716128</td>
+<td>Marshall's all that Mathers #eminem #slimshady #ACLfest @ Austin City Limits Music Festival (ACL) http://t.co/dTL41Oy0zl</td>
+</tr>
+<tr id = "coord5">
+<td id = "lng">90.35433</td><td id = "lat">23.78437</td>
+<td>"@Eminem: BBQ all week until round 2 of #ACL http://t.co/1ihrkF6Rte"</td>
+</tr>
+<tr id = "coord6">
+<td id = "lng">-97.77666667</td><td id = "lat">30.26361111</td>
+<td>Austin city limits, what a fun festival #ACL #ATX #UTAustin #longhorns #Eminem #geology #festival @… http://t.co/REdH8tUAws</td>
+</tr>
+<tr id = "coord7">
+<td id = "lng">-98.62427338</td><td id = "lat">29.49807689</td>
+<td>then THIS happened! 
+My life is complete!
+#Eminem #slimshady #acl #aclfest @ Austin City Limits Music… http://t.co/EV84O984on</td>
+</tr>
+<tr id = "coord8">
+<td id = "lng">-97.77031667</td><td id = "lat">30.26910333</td>
+<td>ACL sing for the moment. #eminem #slimshady #marshallmathers #ACL #ACLFest #AustinCityLimits #rapgod @… http://t.co/rHzjPrU367</td>
+</tr>
+<tr id = "coord9">
+<td id = "lng">-98.6485499</td><td id = "lat">29.4841553</td>
+<td>Felt bad for @IGGYAZALEA at #acl right before @Eminem so alot of fans missed her waiting for a good spot to watch the #RapGod</td>
+</tr>
+<tr id = "coord10">
+<td id = "lng">-97.77031667</td><td id = "lat">30.26910333</td>
+<td>Eminem!!! #ACL #ACLFest #eminem #slimshady #marshallmathers #rapgod #AustinCityLimits… http://t.co/eMkV9LGzi4</td>
+</tr>
+</table>
+</body>
+
